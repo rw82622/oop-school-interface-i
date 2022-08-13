@@ -6,7 +6,8 @@ class Staff(Person):
     def __init__(self, name, age, password, role, employee_id):
         super().__init__(name, age, password, role)
         self.employee_id = employee_id
-            
+    
+    @classmethod        
     def all_staff(self):
         with open("./data/staff.csv") as file:
             staff = csv.reader(file)

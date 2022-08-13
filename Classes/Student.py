@@ -7,6 +7,7 @@ class Student(Person):
         super().__init__(name, age, password, role)
         self.school_id = school_id
     
+    @classmethod
     def all_students(self):
         with open("./data/students.csv") as file:
             students = csv.reader(file)
